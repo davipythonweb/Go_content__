@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Olá Mundo!, aluno.")
-	fmt.Println("programing in Golang.")
+	var name string = "Eliote"
+	var version float32 = 1.1
+	var age int
+	fmt.Println("Olá, developer", name, ", sua Idade eh:", age)
+	fmt.Println("Este programa está na versão", version)
 }
