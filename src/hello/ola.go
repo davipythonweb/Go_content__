@@ -21,6 +21,17 @@ func main() {
 	fmt.Println("O endereço ou ponteiro da variavel comando eh:", &comando)
 
 	fmt.Println("O comando escolhido foi", comando)
+
+	if comando == 1 {
+		fmt.Println("Monitorando...")
+	} else if comando == 2 {
+		fmt.Println("Exibindo Logs...")
+
+	} else if comando == 3 {
+		fmt.Println("Saindo do Programa...")
+	} else {
+		fmt.Println("Ops! Comando desconhecido.")
+	}
 }
 
 // func main() {
