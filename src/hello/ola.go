@@ -17,7 +17,7 @@ func main() {
 	var comando int
 	// fmt.Scanf("%d", &comando)
 	//ou
-	fmt.Scan(&comando)
+	fmt.Scan(&comando) // o -> & , serve para pegar o endereço ou ponteiro da variavel.
 	fmt.Println("O endereço ou ponteiro da variavel comando eh:", &comando)
 
 	fmt.Println("O comando escolhido foi", comando)
