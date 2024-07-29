@@ -2,22 +2,14 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 func main() {
-	name := "Eliote"
-	version := 1.1
-	fmt.Println("Olá, developer", name)
-	fmt.Println("Este programa está na versão", version)
 
-	fmt.Println("1- Iniciar Monitoramento")
-	fmt.Println("2- Exibir Logs")
-	fmt.Println("3- Sair do Programa")
-
-	var comando int
-	fmt.Scan(&comando)
-
-	fmt.Println("O comando escolhido foi", comando)
+	exibeIntroducao()
+	exibeMenu()
+	comando := lerComando()
 
 	switch comando {
 	case 1:
@@ -26,9 +18,33 @@ func main() {
 		fmt.Println("Exibindo Logs...")
 	case 3:
 		fmt.Println("Saindo do Programa...")
+		os.Exit(0)
 	default:
 		fmt.Println("Ops! Comando desconhecido.")
+		os.Exit(-1) //o numero -1 indica que ocorreu algum erro no programa.
 	}
+}
+
+func exibeIntroducao() {
+	name := "Eliote"
+	version := 1.1
+	fmt.Println("Olá, developer", name)
+	fmt.Println("Este programa está na versão", version)
+}
+
+func lerComando() int {
+	var comandoLido int
+	fmt.Scan(&comandoLido)
+
+	fmt.Println("O comando escolhido foi", comandoLido)
+
+	return comandoLido
+}
+
+func exibeMenu() {
+	fmt.Println("1- Iniciar Monitoramento")
+	fmt.Println("2- Exibir Logs")
+	fmt.Println("3- Sair do Programa")
 }
 
 // func main() {
