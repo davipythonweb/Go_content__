@@ -9,21 +9,24 @@ import (
 func main() {
 
 	exibeIntroducao()
-	exibeMenu()
 
-	comando := lerComando()
+	for {
+		exibeMenu()
 
-	switch comando {
-	case 1:
-		iniciarMonitoramento()
-	case 2:
-		fmt.Println("Exibindo Logs...")
-	case 3:
-		fmt.Println("Saindo do Programa...")
-		os.Exit(0)
-	default:
-		fmt.Println("Ops! Comando desconhecido.")
-		os.Exit(-1) //o numero -1 indica que ocorreu algum erro no programa.
+		comando := lerComando()
+
+		switch comando {
+		case 1:
+			iniciarMonitoramento()
+		case 2:
+			fmt.Println("Exibindo Logs...")
+		case 3:
+			fmt.Println("Saindo do Programa...")
+			os.Exit(0)
+		default:
+			fmt.Println("Ops! Comando desconhecido.")
+			os.Exit(-1) //o numero -1 indica que ocorreu algum erro no programa.
+		}
 	}
 }
 
@@ -53,7 +56,14 @@ func iniciarMonitoramento() {
 	fmt.Println("Monitorando...")
 	site := "https://www.alura.com.br/"
 	resp, _ := http.Get(site)
-	fmt.Println(resp)
+	// fmt.Println(resp)
+
+	if resp.StatusCode == 200 {
+		fmt.Println("Site:", site, "foi carregado com sucesso!")
+	} else {
+		fmt.Println("Site:", site, "esta com problemas. Status Code:",
+			resp.StatusCode)
+	}
 }
 
 // func main() {
