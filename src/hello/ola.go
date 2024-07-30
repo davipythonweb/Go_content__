@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 	"os"
 )
 
@@ -9,11 +10,12 @@ func main() {
 
 	exibeIntroducao()
 	exibeMenu()
+
 	comando := lerComando()
 
 	switch comando {
 	case 1:
-		fmt.Println("Monitorando...")
+		iniciarMonitoramento()
 	case 2:
 		fmt.Println("Exibindo Logs...")
 	case 3:
@@ -45,6 +47,13 @@ func exibeMenu() {
 	fmt.Println("1- Iniciar Monitoramento")
 	fmt.Println("2- Exibir Logs")
 	fmt.Println("3- Sair do Programa")
+}
+
+func iniciarMonitoramento() {
+	fmt.Println("Monitorando...")
+	site := "https://www.alura.com.br/"
+	resp, _ := http.Get(site)
+	fmt.Println(resp)
 }
 
 // func main() {
