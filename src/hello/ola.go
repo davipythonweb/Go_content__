@@ -56,7 +56,6 @@ func iniciarMonitoramento() {
 	fmt.Println("Monitorando...")
 	site := "https://www.alura.com.br/"
 	resp, _ := http.Get(site)
-	// fmt.Println(resp)
 
 	if resp.StatusCode == 200 {
 		fmt.Println("Site:", site, "foi carregado com sucesso!")
