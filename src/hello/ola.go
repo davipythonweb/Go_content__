@@ -20,7 +20,7 @@ func main() {
 			iniciarMonitoramento()
 		case 2:
 			fmt.Println("Exibindo Logs...")
-		case 3:
+		case 0:
 			fmt.Println("Saindo do Programa...")
 			os.Exit(0)
 		default:
@@ -49,7 +49,7 @@ func lerComando() int {
 func exibeMenu() {
 	fmt.Println("1- Iniciar Monitoramento")
 	fmt.Println("2- Exibir Logs")
-	fmt.Println("3- Sair do Programa")
+	fmt.Println("0- Sair do Programa")
 }
 
 func iniciarMonitoramento() {
