@@ -55,6 +55,16 @@ func exibeMenu() {
 func iniciarMonitoramento() {
 	fmt.Println("Monitorando...")
 
+	sites := []string{"https://solyd.com.br/",
+		"https://olhardigital.com.br/", "https://pato.academy/"}
+
+	fmt.Println(sites)
+
+	for i, site := range sites {
+		fmt.Println("Estpu passando na posicao ", i, "do meu slice e essa posicao tem o site: ", site)
+
+	}
+
 	site := "https://www.alura.com.br/"
 	resp, _ := http.Get(site)
 
