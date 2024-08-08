@@ -4,27 +4,14 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-	"reflect"
 )
 
 func main() {
 
-	// criando um array
-	var sites [4]string
-	sites[0] = "https://pythonando.com.br/"
-	sites[1] = "https://pythonweb.com.br/"
-	sites[2] = "https://pycodebr.com.br/"
-
-	fmt.Println(reflect.TypeOf(sites))
-
-	fmt.Println(sites)
-
-	exibeNomes()
-
-	// exibeIntroducao()
+	exibeIntroducao()
 
 	for {
-		// exibeMenu()
+		exibeMenu()
 
 		comando := lerComando()
 
@@ -77,23 +64,6 @@ func iniciarMonitoramento() {
 		fmt.Println("Site:", site, "esta com problemas. Status Code:",
 			resp.StatusCode)
 	}
-}
-
-func exibeNomes() {
-	nomes := []string{"Davi", "Danilo", "Diogo"}
-
-	fmt.Println(nomes)
-	fmt.Println(reflect.TypeOf(nomes))
-	fmt.Println("O meu slice tem: ", len(nomes), "itens")
-	fmt.Println("O meu slice tem capacidade para: ", cap(nomes), "itens")
-
-	// no slice, pode ser feito o append
-	nomes = append(nomes, "Dominick")
-
-	fmt.Println(nomes)
-	fmt.Println(reflect.TypeOf(nomes))
-	fmt.Println("O meu slice tem: ", len(nomes), "itens")
-	fmt.Println("O meu slice tem capacidade para: ", cap(nomes), "itens")
 }
 
 // func main() {
