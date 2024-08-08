@@ -7,7 +7,6 @@ import (
 	"reflect"
 )
 
-// aula 19
 func main() {
 
 	// criando um array
