@@ -122,3 +122,5 @@ func leSitesDoArquivo() []string {
 
 	return sites
 }
+
+// aula 26 encerrada
