@@ -13,7 +13,7 @@ const delay = 5
 func main() {
 
 	exibeIntroducao()
-
+	leSitesDoArquivo()
 	for {
 		exibeMenu()
 
@@ -60,8 +60,7 @@ func exibeMenu() {
 func iniciarMonitoramento() {
 	fmt.Println("Monitorando...")
 
-	sites := []string{"https://solyd.com.br/",
-		"https://olhardigital.com.br/", "https://pato.academy/"}
+	sites := leSitesDoArquivo()
 
 	for i := 0; i < monitoramentos; i++ {
 		for i, site := range sites {
@@ -86,4 +85,14 @@ func testaSite(site string) {
 		fmt.Println("Site:", site, "esta com problemas. Status Code:",
 			resp.StatusCode)
 	}
+}
+
+func leSitesDoArquivo() []string {
+
+	var sites []string
+
+	arquivo, _ := os.Open("sites.txt")
+	fmt.Println(arquivo)
+
+	return sites
 }
