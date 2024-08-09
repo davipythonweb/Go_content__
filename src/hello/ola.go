@@ -80,7 +80,7 @@ func testaSite(site string) {
 	resp, err := http.Get(site)
 
 	if err != nil {
-		fmt.Println("Ocorreu um erro:", err)
+		fmt.Println("ops!Ocorreu um erro:", err)
 	}
 
 	if resp.StatusCode == 200 {
