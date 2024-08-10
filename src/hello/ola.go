@@ -155,3 +155,5 @@ func imprimeLogs() {
 
 	fmt.Println(string(arquivo))
 }
+
+// aula 33 finalizada
