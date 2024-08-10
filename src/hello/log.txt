@@ -14,3 +14,11 @@
 09/08/2024 22:33:26 - https://olhardigital.com.br/ - online: true
 09/08/2024 22:33:26 - https://pato.academy/ - online: false
 09/08/2024 22:33:26 - https://pythonweb.com.br - online: true
+09/08/2024 22:40:31 - https://solyd.com.br/ - online: true
+09/08/2024 22:40:37 - https://olhardigital.com.br/ - online: true
+09/08/2024 22:40:40 - https://pato.academy/ - online: false
+09/08/2024 22:40:41 - https://pythonweb.com.br - online: true
+09/08/2024 22:40:47 - https://solyd.com.br/ - online: true
+09/08/2024 22:40:47 - https://olhardigital.com.br/ - online: true
+09/08/2024 22:40:47 - https://pato.academy/ - online: false
+09/08/2024 22:40:47 - https://pythonweb.com.br - online: true
